@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "namespaceName": {
-        "value": "GEN-UNIQUE"
+        "value": "McLooneConnectHubNs"
       },
       "eventhubSku": {
         "value": "Standard"
       },
       "eventHubName": {
-        "value": "GEN-UNIQUE-15"
+        "value": "McLooneConnectHub"
       },
       "consumerGroupName": {
-        "value": "GEN-UNIQUE"
+        "value": "McLooneConnectCG"
       }
     }
   }
