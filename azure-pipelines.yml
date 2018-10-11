@@ -9,6 +9,12 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
+    sourceFolder: $(Build.SourcesDirectory)/templates
     targetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: $(Build.SourcesDirectory)/functions
+    includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
