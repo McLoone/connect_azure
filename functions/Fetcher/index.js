@@ -1,11 +1,13 @@
-module.exports = async function (context, req) {
+module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     if (req.query.name || (req.body && req.body.name)) {
-        context.log('Event Hub message created at: ', timeStamp); 
+
+        context.log('Event Hub message created at'); 
         context.bindings.outputEventHubMessage = req.body.name;
-        
-        context.res = {            
+
+        context.res = {
+            // status: 200, /* Defaults to 200 */
             body: "Hello " + (req.query.name || req.body.name)
         };
     }
@@ -15,4 +17,5 @@ module.exports = async function (context, req) {
             body: "Please pass a name on the query string or in the request body"
         };
     }
+    context.done();
 };

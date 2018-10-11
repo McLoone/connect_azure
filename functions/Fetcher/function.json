@@ -14,7 +14,7 @@
     {
       "type": "eventHub",
       "name": "outputEventHubMessage",
-      "eventHubName": "mclooneconnecthub",
+      "path": "mclooneconnecthub",
       "connection": "EventHubConnectionString",
       "direction": "out"
     },
