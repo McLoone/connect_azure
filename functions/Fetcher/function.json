@@ -12,6 +12,13 @@
       ]
     },
     {
+      "type": "eventHub",
+      "name": "outputEventHubMessage",
+      "eventHubName": "mclooneconnecthub",
+      "connection": "EventHubConnectionString",
+      "direction": "out"
+    },
+    {
       "type": "http",
       "direction": "out",
       "name": "res"

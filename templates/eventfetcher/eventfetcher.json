@@ -69,6 +69,12 @@
         "properties": {
           "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
           "siteConfig": {
+            "connectionStrings": [
+              {
+                "name": "EventHubConnectionString",
+                "connectionString": "Endpoint=sb://mclooneconnecthubns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=sahx9wEXqyo+zTWmsIE+g531IauhkUDtRE74QCZwHiU="
+              }
+            ],  
             "appSettings": [
               {
                 "name": "AzureWebJobsDashboard",
