@@ -69,13 +69,11 @@
         "properties": {
           "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
           "siteConfig": {
-            "connectionStrings": [
+            "appSettings": [
               {
                 "name": "EventHubConnectionString",
-                "connectionString": "Endpoint=sb://mclooneconnecthubns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=sahx9wEXqyo+zTWmsIE+g531IauhkUDtRE74QCZwHiU="
-              }
-            ],  
-            "appSettings": [
+                "value": "Endpoint=sb://mclooneconnecthubns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=sahx9wEXqyo+zTWmsIE+g531IauhkUDtRE74QCZwHiU="
+              },
               {
                 "name": "AzureWebJobsDashboard",
                 "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]"
